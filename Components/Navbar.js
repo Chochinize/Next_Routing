@@ -9,8 +9,8 @@ const Navbar = () => {
             <Image src='/me.jpg' width={128} height={77}/>
             </div>
                <Link href='/'><a>Home</a></Link>
-               <Link href='/about'><a>About</a></Link>
-               <Link href='/martinpage'><a>Home</a></Link>
+              
+               <Link href='/martinpage'><a>Links</a></Link>
         </nav>
     );
 }

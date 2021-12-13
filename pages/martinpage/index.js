@@ -1,24 +1,28 @@
 import Link from 'next/link';
 import styles from './../../styles/Martin.module.css'
-
+import Head from 'next/head';
 
 
 export const getStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json()
     return {
-        props:{ninjas:data}
+        props:{lists:data}
     }
 }
 
-const Ninjas = ({ninjas}) => {
+const Lists = ({lists}) => {
+    <Head>
+    <title> Martins List | AND FRIENDS</title>
+    <meta name='keywords' content='lists'/>
+    </Head>
     return (
         <div>
-            <h1>Ninjas</h1>
-            {ninjas.map(ninja=>(<Link href={`/martinpage/${ninja.id}`} key={ninja.id}>
+            <h1>List</h1>
+            {lists.map(list=>(<Link href={`/martinpage/${list.id}`} key={list.id}>
                 <a className={styles.single}>
                     <h3>
-                        {ninja.name}
+                        {list.name}
                     </h3>
                 </a>
             </Link>))}
@@ -26,4 +30,4 @@ const Ninjas = ({ninjas}) => {
     );
 }
  
-export default Ninjas;
+export default Lists;

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer>
+        <footer className="absolute ">
             Copyright © {new Date().getFullYear()}
         </footer>
       );

@@ -7,17 +7,18 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <>
+    <div className=''>
+
     <Head>
     <title> Martins List | AND FRIENDS</title>
-    <meta name='keywords' content='ninjas'/>
+    <meta name='keywords' content='nexjspractice with router'/>
     </Head>
     <div >
-      <h1 className={styles.title}>My Name</h1>
-      <p className={styles.text}>Some dummy text</p>
+      
 
       <Link href='/martinpage'><a className={styles.btn}>See All of the Listing</a></Link>
+ 
     </div>
-    </>
+    </div>
   )
 }
